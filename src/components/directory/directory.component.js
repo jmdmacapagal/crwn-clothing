@@ -4,34 +4,46 @@ import MenuItem from "../menu-item/menuItem.component";
 
 class Directory extends Component {
   state = {
-    items: [
+    sections: [
       {
-        title: "Hats",
-        subtitle: "Shop Now",
+        title: "hats",
+        imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
+        id: 1,
+        linkUrl: "shop/hats",
       },
       {
-        title: "Jackets",
-        subtitle: "Shop Now",
+        title: "jackets",
+        imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
+        id: 2,
+        linkUrl: "shop/jackets",
       },
       {
-        title: "Sneakers",
-        subtitle: "Shop Now",
+        title: "sneakers",
+        imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
+        id: 3,
+        linkUrl: "shop/sneakers",
       },
       {
-        title: "Womens",
-        subtitle: "Shop Now",
+        title: "womens",
+        imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+        size: "large",
+        id: 4,
+        linkUrl: "shop/womens",
       },
       {
-        title: "Mens",
-        subtitle: "Shop Now",
+        title: "mens",
+        imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
+        size: "large",
+        id: 5,
+        linkUrl: "shop/mens",
       },
     ],
   };
   render() {
     return (
       <div className="directory">
-        {this.state.items.map((item, index) => {
-          return <MenuItem key={index} {...item} />;
+        {this.state.sections.map((item) => {
+          return <MenuItem key={item.id} {...item} />;
         })}
       </div>
     );
