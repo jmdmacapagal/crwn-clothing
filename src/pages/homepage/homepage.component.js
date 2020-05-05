@@ -1,31 +1,13 @@
 import React from "react";
 import "./homepage.styles.scss";
-
-const items = [
-  {
-    title: "Hats",
-    subtitle: "Shop Now",
-  },
-  {
-    title: "Jackets",
-    subtitle: "Shop Now",
-  },
-  {
-    title: "Sneakers",
-    subtitle: "Shop Now",
-  },
-  {
-    title: "Womens",
-    subtitle: "Shop Now",
-  },
-  {
-    title: "Mens",
-    subtitle: "Shop Now",
-  },
-];
+import Directory from "../../components/directory/directory.component";
 
 const HomePage = () => {
-  return <div className="homepage"></div>;
+  return (
+    <div className="homepage">
+      <Directory />
+    </div>
+  );
 };
 
 export default HomePage;
