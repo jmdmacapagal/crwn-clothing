@@ -4,7 +4,7 @@ import Header from "../src/components/header/header.component";
 
 import HomePage from "../src/pages/homepage/homepage.component";
 import ShopPage from "../src/pages/shop/shop.component";
-import SignInAndSignUpPage from "../src/pages/shop/shop.component";
+import SignInAndSignUpPage from "../src/pages/signInAndSignUp/signInAndSignUp.component";
 
 import "./App.css";
 
