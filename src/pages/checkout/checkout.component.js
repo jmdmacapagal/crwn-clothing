@@ -7,6 +7,7 @@ import {
   selectCartTotal,
 } from "../../redux/cart/cart.selectors";
 import CheckoutItem from "../../components/checkoutItem/checkoutItem.component";
+import StripeCheckoutButton from "../../components/stripeButton/stripeButton.component";
 
 const Checkout = ({ cartItems, total }) => {
   return (
@@ -36,9 +37,13 @@ const Checkout = ({ cartItems, total }) => {
         return <CheckoutItem key={cartItem.id} cartItem={cartItem} />;
       })}
 
-      <div className="total">
-        <span>Total: ${total}</span>
+      <div className="total">Total: ${total}</div>
+      <div className="test-warning">
+        * Use the following for test checkout *
+        <br />
+        4242 4242 4242 4242 - Exp: 01/20 - CVV: 123
       </div>
+      <StripeCheckoutButton price={total} />
     </div>
   );
 };
